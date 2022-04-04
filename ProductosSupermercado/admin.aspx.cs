@@ -28,23 +28,23 @@ namespace ProductosSupermercado
             else
             {
                 oEntAdmin.Id = txtId.Text;
-                DataSet dsAdmin = new DataSet();
-                dsAdmin = oRegAdmin.consultarAdmin(oEntAdmin);
+                DataSet ds = new DataSet();
+                ds = oRegAdmin.consultarAdmin(oEntAdmin);
 
-                if (dsAdmin.Tables[0].Rows.Count == 0) {
+                if (ds.Tables[0].Rows.Count == 0) {
                     lblMsg.Text = "El administrador con id " + txtId.Text + " No existe";
                     lblMsg.CssClass = "text-danger";
                 }
                 else
                 {
-                    if(dsAdmin.Tables[0].Rows[0]["contraseña"].ToString() != txtPassword.Text){
+                    if(ds.Tables[0].Rows[0]["contraseña"].ToString() != txtPassword.Text){
                         lblMsg.Text = "La contraseña es incorrecta";
                         lblMsg.CssClass = "text-danger";
                     }
                     else
                     {
-                        lblMsg.Text = "Has ingresado correctamente";
-                        lblMsg.CssClass = "text-success";
+                        String name = ds.Tables[0].Rows[0]["nombre"].ToString();
+                        Response.Redirect(string.Format("productos.aspx?name={0}", name));
                     }
                 }
             }
