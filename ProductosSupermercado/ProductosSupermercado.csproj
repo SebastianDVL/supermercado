@@ -88,13 +88,13 @@
     <Content Include="imgs\productos.png" />
     <Content Include="imgs\super.png" />
     <Content Include="productos.aspx" />
-    <Content Include="scripts.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\controller.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

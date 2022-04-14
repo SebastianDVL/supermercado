@@ -52,5 +52,45 @@ namespace CapaDatos
                 throw new Exception(ex.Message);
             }
         }
+        [Obsolete]
+        public bool borrar_producto(ClsEntProductos oEntProductos)
+        {
+            try
+            {
+                cmd.Connection = oConexion.conectar("supermercado");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "borrar_producto";
+                cmd.Parameters.Add("@pcod_producto", oEntProductos.CodProducto);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        [Obsolete]
+        public bool actualizar_producto(ClsEntProductos oEntProductos)
+        {
+            try
+            {
+                cmd.Connection = oConexion.conectar("supermercado");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "actualizar_producto";
+                cmd.Parameters.Add("@pcod_producto", oEntProductos.CodProducto);
+                cmd.Parameters.Add("@pnom_producto", oEntProductos.Nombre);
+                cmd.Parameters.Add("@pmarca", oEntProductos.Marca);
+                cmd.Parameters.Add("@pexistencias", oEntProductos.Existencias);
+                cmd.Parameters.Add("@pprecio", oEntProductos.Precio);
+                cmd.Parameters.Add("@pdescuento", oEntProductos.Descuento);
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

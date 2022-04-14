@@ -1,4 +1,56 @@
-﻿body {
+﻿
+body {
+    height: 100vh;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='720' preserveAspectRatio='none' viewBox='0 0 1440 720'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1846%26quot%3b)' fill='none'%3e%3crect width='1440' height='720' x='0' y='0' fill='rgba(245%2c 245%2c 245%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c552.719C108.207%2c546.22%2c214.442%2c533.13%2c311.159%2c484.173C415.606%2c431.303%2c520.22%2c366.117%2c574.028%2c262.15C628.909%2c156.108%2c636.75%2c28.352%2c606.9%2c-87.259C578.577%2c-196.957%2c487.186%2c-272.245%2c413.772%2c-358.536C339.62%2c-445.695%2c287.094%2c-573.348%2c174.764%2c-595.193C62.097%2c-617.104%2c-24.607%2c-490.225%2c-136.71%2c-465.591C-261.813%2c-438.101%2c-413.129%2c-524.875%2c-512.581%2c-444.154C-609.993%2c-365.088%2c-584.19%2c-210.737%2c-603.441%2c-86.762C-622.929%2c38.738%2c-676.923%2c169.535%2c-625.936%2c285.855C-574.786%2c402.547%2c-453.346%2c473.08%2c-336.143%2c523.049C-230.532%2c568.076%2c-114.602%2c559.602%2c0%2c552.719' fill='%23c7c7c7'%3e%3c/path%3e%3cpath d='M1440 1245.829C1554.395 1250.347 1683.931 1310.963 1776.488 1243.586 1869.56 1175.834 1844.556 1030.909 1883.874 922.71 1919.195 825.51 1999.75 743.433 1995.789 640.09 1991.6770000000001 532.809 1920.74 444.182 1862.088 354.259 1794.772 251.053 1747.202 111.11199999999997 1628.712 77.30399999999997 1510.183 43.485000000000014 1402.317 154.16499999999996 1284.194 189.37400000000002 1166.713 224.39100000000002 1030.063 204.529 936.427 283.652 838.067 366.767 768.711 494.933 770.205 623.698 771.652 748.428 880.795 838.991 944.117 946.462 999.96 1041.24 1025.995 1160.811 1120.17 1217.665 1213.685 1274.12 1330.85 1241.518 1440 1245.829' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1846'%3e%3crect width='1440' height='720' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#panelIngresar,#panelBorrar,#panelModificar{
+    display:grid;
+    place-items:center;
+    position:absolute;
+    top:0;
+    left:0;
     height:100vh;
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(6px);
 
 }
+#deleted {
+    position: absolute;
+    top: 2%;
+    left: 35%;
+    width:30%;
+}
+#panelProductos{
+    height:67vh;
+    overflow-y:scroll;
+}
+
+#panelProductos div .d-flex i{
+    cursor:pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+main{
+    height:80vh;
+}
+section{
+    height:80vh;
+}
+
+h2{
+    color:rgba(0,0,0,0.7);
+}
+
